@@ -24,6 +24,10 @@
     --tam-jugador: 4rem;
     --pos-lateral-derecho: 75%;
     --pos-lateral-izquierdo: 15%;
+    --pos-volante-izquierdo: 5%;
+    --pos-volante-central-izquierdo: 30%;
+    --pos-volante-central-derecho: 60%;
+    --pos-volante-derecho: 85%;
  }
  
  #escenario {
@@ -304,6 +308,10 @@
         --pos-arquero: 37%;
         --tam-jugador: 3rem;
         --pos-lateral-izquierdo: 5%;
+        --pos-volante-izquierdo: 3%;
+        --pos-volante-central-izquierdo: 25%;
+        --pos-volante-central-derecho: 55%;
+        --pos-volante-derecho: 78%;    
     }
  }
  
@@ -312,10 +320,22 @@
         --ancho-lineas: 1px;
         --tam-jugador: 2rem;
         --pos-lateral-izquierdo: 5%;
+        --pos-volante-izquierdo: 3%;
+        --pos-volante-central-izquierdo: 25%;
+        --pos-volante-central-derecho: 55%;
+        --pos-volante-derecho: 78%;    
     }
  }
  
-#arquero, #central, #lateral-derecho, #lateral-izquierdo {
+#arquero, 
+#central, 
+#lateral-derecho,
+#lateral-izquierdo,
+#volante-izquierdo,
+#volante-central-izquierdo,
+#volante-central-derecho,
+#volante-derecho
+{
     width: var(--tam-jugador);
     border-radius: var(--tam-jugador);
     height: var(--tam-jugador);
@@ -326,7 +346,15 @@
     z-index: 1000;
 } 
 
-#arquero.selected, #central.selected, #lateral-derecho.selected, #lateral-izquierdo.selected {
+#arquero.selected, 
+#central.selected, 
+#lateral-derecho.selected, 
+#lateral-izquierdo.selected,
+#volante-izquierdo.selected,
+#volante-central-izquierdo.selected,
+#volante-central-derecho.selected,
+#volante-derecho.selected
+{
     background-color: red;
 }
 
@@ -338,4 +366,22 @@
 #lateral-izquierdo {
    top: var(--pos-lateral-izquierdo);
    left: 20%;
+}
+
+#volante-izquierdo {
+   top: var(--pos-volante-izquierdo);
+   left: 45%;
+}
+
+#volante-central-izquierdo {
+   top: var(--pos-volante-central-izquierdo);
+}
+
+#volante-central-derecho {
+   top: var(--pos-volante-central-derecho);
+}
+
+#volante-derecho{
+   top: var(--pos-volante-derecho);
+   left: 45%;
 }
