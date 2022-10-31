@@ -309,9 +309,9 @@
  }
  
 #arquero {
-    width: 4rem;
-    border-radius: 4rem;
-    height: 4rem;
+    width: 2rem;
+    border-radius: 2rem;
+    height: 2rem;
     background-color: white;
     position: absolute;
     cursor: pointer;
