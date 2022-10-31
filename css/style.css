@@ -21,6 +21,9 @@
  :root {
     --ancho-lineas: 3px;
     --pos-arquero: 44%;
+    --tam-jugador: 4rem;
+    --pos-lateral-derecho: 75%;
+    --pos-lateral-izquierdo: 15%;
  }
  
  #escenario {
@@ -299,25 +302,40 @@
     :root {
         --ancho-lineas: 2px;
         --pos-arquero: 37%;
+        --tam-jugador: 3rem;
+        --pos-lateral-izquierdo: 5%;
     }
  }
  
  @media only screen and (max-width: 480px) {
     :root {
         --ancho-lineas: 1px;
+        --tam-jugador: 2rem;
+        --pos-lateral-izquierdo: 5%;
     }
  }
  
-#arquero {
-    width: 2rem;
-    border-radius: 2rem;
-    height: 2rem;
+#arquero, #central, #lateral-derecho, #lateral-izquierdo {
+    width: var(--tam-jugador);
+    border-radius: var(--tam-jugador);
+    height: var(--tam-jugador);
     background-color: white;
     position: absolute;
     cursor: pointer;
     top: var(--pos-arquero);
+    z-index: 1000;
 } 
 
-#arquero.selected {
+#arquero.selected, #central.selected, #lateral-derecho.selected, #lateral-izquierdo.selected {
     background-color: red;
+}
+
+#lateral-derecho {
+   top: var(--pos-lateral-derecho);
+   left: 20%;
+}
+
+#lateral-izquierdo {
+   top: var(--pos-lateral-izquierdo);
+   left: 20%;
 }
