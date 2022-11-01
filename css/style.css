@@ -334,7 +334,10 @@
 #volante-izquierdo,
 #volante-central-izquierdo,
 #volante-central-derecho,
-#volante-derecho
+#volante-derecho,
+#delantero,
+#delantero-derecho,
+#delantero-izquierdo
 {
     width: var(--tam-jugador);
     border-radius: var(--tam-jugador);
@@ -353,7 +356,10 @@
 #volante-izquierdo.selected,
 #volante-central-izquierdo.selected,
 #volante-central-derecho.selected,
-#volante-derecho.selected
+#volante-derecho.selected,
+#delantero.selected,
+#delantero-derecho.selected,
+#delantero-izquierdo.selected
 {
     background-color: red;
 }
@@ -384,6 +390,21 @@
 #volante-derecho{
    top: var(--pos-volante-derecho);
    left: 45%;
+}
+
+#delantero-izquierdo{
+   top: var(--pos-volante-izquierdo);
+   left: 69%;
+}
+
+#delantero{
+   top: var(--pos-arquero);
+   left: 70%;
+}
+
+#delantero-derecho{
+   top: var(--pos-volante-derecho);
+   left: 69%;
 }
 
 #count {

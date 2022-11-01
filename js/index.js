@@ -64,6 +64,30 @@ document.getElementById('volante-central-derecho').addEventListener('click', fun
         }
         e.target.classList.toggle('selected');
 });
+document.getElementById('delantero').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
+        e.target.classList.toggle('selected');
+});
+document.getElementById('delantero-derecho').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
+        e.target.classList.toggle('selected');
+});
+document.getElementById('delantero-izquierdo').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
+        e.target.classList.toggle('selected');
+});
 
 function addFaltante() {
         faltantes--;
