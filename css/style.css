@@ -327,18 +327,7 @@
     }
  }
  
-#arquero, 
-#central, 
-#lateral-derecho,
-#lateral-izquierdo,
-#volante-izquierdo,
-#volante-central-izquierdo,
-#volante-central-derecho,
-#volante-derecho,
-#delantero,
-#delantero-derecho,
-#delantero-izquierdo
-{
+.player {
     width: var(--tam-jugador);
     border-radius: var(--tam-jugador);
     height: var(--tam-jugador);
@@ -349,17 +338,7 @@
     z-index: 1000;
 } 
 
-#arquero.selected, 
-#central.selected, 
-#lateral-derecho.selected, 
-#lateral-izquierdo.selected,
-#volante-izquierdo.selected,
-#volante-central-izquierdo.selected,
-#volante-central-derecho.selected,
-#volante-derecho.selected,
-#delantero.selected,
-#delantero-derecho.selected,
-#delantero-izquierdo.selected
+.player.selected
 {
     background-color: orangered;
 }
