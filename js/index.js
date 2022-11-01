@@ -92,9 +92,18 @@ document.getElementById('delantero-izquierdo').addEventListener('click', functio
 function addFaltante() {
         faltantes--;
         document.getElementById('faltantes').innerHTML = faltantes;
+        check();
 }
 
 function removeFaltante() {
         faltantes++;
         document.getElementById('faltantes').innerHTML = faltantes;
+}
+
+function check() {
+        if (faltantes == 0) {
+                setTimeout(() => {
+                        alert('Ganaste un 10% de descuento!');
+                }, 100);
+        }
 }
