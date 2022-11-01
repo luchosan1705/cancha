@@ -343,6 +343,16 @@
     background-color: orangered;
 }
 
+#goalkeeper {
+   background-size: var(--tam-jugador);
+   background-image: url('../images/goalkeeper-unselected.png');
+}
+
+#goalkeeper.selected {
+   background-size: var(--tam-jugador);
+   background-image: url('../images/goalkeeper-selected.jpg');
+}
+
 #lateral-derecho {
    top: var(--pos-lateral-derecho);
    left: 20%;
