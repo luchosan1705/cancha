@@ -1,98 +1,20 @@
 let faltantes = 11;
 
-document.getElementById('arquero').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('central').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('lateral-derecho').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('lateral-izquierdo').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('volante-central-izquierdo').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('volante-izquierdo').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('volante-derecho').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('volante-central-derecho').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('delantero').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('delantero-derecho').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
-document.getElementById('delantero-izquierdo').addEventListener('click', function(e){
-        if (e.target.classList.contains('selected')){
-                removeFaltante();
-        } else {
-                addFaltante();
-        }
-        e.target.classList.toggle('selected');
-});
+document.getElementById('arquero').addEventListener('click', (e) => clickAction(e));
+document.getElementById('central').addEventListener('click', (e) => clickAction(e));
+document.getElementById('lateral-derecho').addEventListener('click', (e) => clickAction(e));
+document.getElementById('lateral-izquierdo').addEventListener('click', (e) => clickAction(e));
+document.getElementById('volante-central-izquierdo').addEventListener('click', (e) => clickAction(e));
+document.getElementById('volante-izquierdo').addEventListener('click', (e) => clickAction(e));
+document.getElementById('volante-derecho').addEventListener('click', (e) => clickAction(e));
+document.getElementById('volante-central-derecho').addEventListener('click', (e) => clickAction(e));
+document.getElementById('delantero').addEventListener('click', (e) => clickAction(e));
+document.getElementById('delantero-derecho').addEventListener('click', (e) => clickAction(e));
+document.getElementById('delantero-izquierdo').addEventListener('click', (e) => clickAction(e));
 
 function addFaltante() {
         faltantes--;
         document.getElementById('faltantes').innerHTML = faltantes;
-        check();
 }
 
 function removeFaltante() {
@@ -106,4 +28,10 @@ function check() {
                         alert('Ganaste un 10% de descuento!');
                 }, 100);
         }
+}
+
+function clickAction(e) {
+        e.target.classList.contains('selected') ? removeFaltante() : addFaltante();
+        e.target.classList.toggle('selected');
+        check();
 }
