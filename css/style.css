@@ -20,7 +20,7 @@
  
  :root {
     --ancho-lineas: 3px;
-    --pos-arquero: 44%;
+    --pos-goalkeeper: 44%;
     --tam-jugador: 4rem;
     --pos-lateral-derecho: 75%;
     --pos-lateral-izquierdo: 15%;
@@ -305,7 +305,7 @@
  @media only screen and (max-width: 768px) {
     :root {
         --ancho-lineas: 2px;
-        --pos-arquero: 37%;
+        --pos-goalkeeper: 37%;
         --tam-jugador: 3rem;
         --pos-lateral-izquierdo: 5%;
         --pos-volante-izquierdo: 3%;
@@ -334,7 +334,7 @@
     background-color: white;
     position: absolute;
     cursor: pointer;
-    top: var(--pos-arquero);
+    top: var(--pos-goalkeeper);
     z-index: 1000;
 } 
 
@@ -377,7 +377,7 @@
 }
 
 #delantero{
-   top: var(--pos-arquero);
+   top: var(--pos-goalkeeper);
    left: 70%;
 }
 

@@ -1,29 +1,32 @@
-let faltantes = 11;
+let missing = 11;
+initEvents();
 
-document.getElementById('arquero').addEventListener('click', (e) => clickAction(e));
-document.getElementById('central').addEventListener('click', (e) => clickAction(e));
-document.getElementById('lateral-derecho').addEventListener('click', (e) => clickAction(e));
-document.getElementById('lateral-izquierdo').addEventListener('click', (e) => clickAction(e));
-document.getElementById('volante-central-izquierdo').addEventListener('click', (e) => clickAction(e));
-document.getElementById('volante-izquierdo').addEventListener('click', (e) => clickAction(e));
-document.getElementById('volante-derecho').addEventListener('click', (e) => clickAction(e));
-document.getElementById('volante-central-derecho').addEventListener('click', (e) => clickAction(e));
-document.getElementById('delantero').addEventListener('click', (e) => clickAction(e));
-document.getElementById('delantero-derecho').addEventListener('click', (e) => clickAction(e));
-document.getElementById('delantero-izquierdo').addEventListener('click', (e) => clickAction(e));
-
-function addFaltante() {
-        faltantes--;
-        document.getElementById('faltantes').innerHTML = faltantes;
+function initEvents() {
+        document.getElementById('goalkeeper').onclick = (e) => clickAction(e);
+        document.getElementById('central').onclick = (e) => clickAction(e);
+        document.getElementById('lateral-derecho').onclick = (e) => clickAction(e);
+        document.getElementById('lateral-izquierdo').onclick = (e) => clickAction(e);
+        document.getElementById('volante-central-izquierdo').onclick = (e) => clickAction(e);
+        document.getElementById('volante-izquierdo').onclick = (e) => clickAction(e);
+        document.getElementById('volante-derecho').onclick = (e) => clickAction(e);
+        document.getElementById('volante-central-derecho').onclick = (e) => clickAction(e);
+        document.getElementById('delantero').onclick = (e) => clickAction(e);
+        document.getElementById('delantero-derecho').onclick = (e) => clickAction(e);
+        document.getElementById('delantero-izquierdo').onclick = (e) => clickAction(e);        
 }
 
-function removeFaltante() {
-        faltantes++;
-        document.getElementById('faltantes').innerHTML = faltantes;
+function addMissing() {
+        missing++;
+        document.getElementById('missing').innerHTML = missing;
+}
+
+function removeMissing() {
+        missing--;
+        document.getElementById('missing').innerHTML = missing;
 }
 
 function check() {
-        if (faltantes == 0) {
+        if (missing == 0) {
                 setTimeout(() => {
                         alert('Ganaste un 10% de descuento!');
                 }, 100);
@@ -31,7 +34,7 @@ function check() {
 }
 
 function clickAction(e) {
-        e.target.classList.contains('selected') ? removeFaltante() : addFaltante();
+        e.target.classList.contains('selected') ? addMissing() : removeMissing();
         e.target.classList.toggle('selected');
         check();
 }
