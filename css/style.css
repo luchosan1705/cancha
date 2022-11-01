@@ -385,3 +385,10 @@
    top: var(--pos-volante-derecho);
    left: 45%;
 }
+
+#count {
+   z-index: 100;
+   color: white;
+   margin-top: 50px;
+   margin-left: 50px;
+}

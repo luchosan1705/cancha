@@ -1,24 +1,76 @@
+let faltantes = 11;
+
 document.getElementById('arquero').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('central').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('lateral-derecho').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('lateral-izquierdo').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('volante-central-izquierdo').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('volante-izquierdo').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('volante-derecho').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
 document.getElementById('volante-central-derecho').addEventListener('click', function(e){
+        if (e.target.classList.contains('selected')){
+                removeFaltante();
+        } else {
+                addFaltante();
+        }
         e.target.classList.toggle('selected');
 });
+
+function addFaltante() {
+        faltantes--;
+        document.getElementById('faltantes').innerHTML = faltantes;
+}
+
+function removeFaltante() {
+        faltantes++;
+        document.getElementById('faltantes').innerHTML = faltantes;
+}
